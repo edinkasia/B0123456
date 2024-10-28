@@ -36,7 +36,8 @@ Note that the `echo = FALSE` parameter was added to the code chunk to prevent pr
 ```{r}
 mtcars %>% 
   group_by(cyl) %>% 
-  summarise(mean_mpg = mean(mpg, na.rm = TRUE)) %>% 
+  summarise(mean_mpg = mean(mpg, na.rm = TRUE),
+            sd_mpg = sd(mpg, na.rm = TRUE)) %>% 
   kable()
   
 ```

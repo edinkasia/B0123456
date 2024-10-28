@@ -387,27 +387,32 @@ plot.</p>
 <h2>Including a table</h2>
 <pre class="r"><code>mtcars %&gt;% 
   group_by(cyl) %&gt;% 
-  summarise(mean_mpg = mean(mpg, na.rm = TRUE)) %&gt;% 
+  summarise(mean_mpg = mean(mpg, na.rm = TRUE),
+            sd_mpg = sd(mpg, na.rm = TRUE)) %&gt;% 
   kable()</code></pre>
 <table>
 <thead>
 <tr class="header">
 <th align="right">cyl</th>
 <th align="right">mean_mpg</th>
+<th align="right">sd_mpg</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
 <td align="right">4</td>
 <td align="right">26.66364</td>
+<td align="right">4.509828</td>
 </tr>
 <tr class="even">
 <td align="right">6</td>
 <td align="right">19.74286</td>
+<td align="right">1.453567</td>
 </tr>
 <tr class="odd">
 <td align="right">8</td>
 <td align="right">15.10000</td>
+<td align="right">2.560048</td>
 </tr>
 </tbody>
 </table>
