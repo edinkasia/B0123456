@@ -383,6 +383,35 @@ chunk like this:</p>
 code chunk to prevent printing of the R code that generated the
 plot.</p>
 </div>
+<div id="including-a-table" class="section level2">
+<h2>Including a table</h2>
+<pre class="r"><code>mtcars %&gt;% 
+  group_by(cyl) %&gt;% 
+  summarise(mean_mpg = mean(mpg, na.rm = TRUE)) %&gt;% 
+  kable()</code></pre>
+<table>
+<thead>
+<tr class="header">
+<th align="right">cyl</th>
+<th align="right">mean_mpg</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="right">4</td>
+<td align="right">26.66364</td>
+</tr>
+<tr class="even">
+<td align="right">6</td>
+<td align="right">19.74286</td>
+</tr>
+<tr class="odd">
+<td align="right">8</td>
+<td align="right">15.10000</td>
+</tr>
+</tbody>
+</table>
+</div>
 
 
 
